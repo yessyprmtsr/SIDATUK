@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-	<title>SIDATUK-HOME</title>
+	<title>Tables - Atlantis Lite Bootstrap 4 Admin Dashboard</title>
 	<meta content='width=device-width, initial-scale=1.0, shrink-to-fit=no' name='viewport' />
 	<link rel="icon" href="../assets/img/icon.ico" type="image/x-icon"/>
-
+	
 	<!-- Fonts and icons -->
 	<script src="../assets/js/plugin/webfont/webfont.min.js"></script>
 	<script>
@@ -21,7 +21,6 @@
 	<!-- CSS Files -->
 	<link rel="stylesheet" href="../assets/css/bootstrap.min.css">
 	<link rel="stylesheet" href="../assets/css/atlantis.min.css">
-
 	<!-- CSS Just for demo purpose, don't include it in your project -->
 	<link rel="stylesheet" href="../assets/css/demo.css">
 </head>
@@ -220,8 +219,8 @@
 										</a>
 									</li>
 									<li>
-										<a href="#">
-											<span class="sub-item">Tahapan Penyelesaian Pekerjaan</span>
+										<a href="compact-sidebar.html">
+											<span class="sub-item">Tahapan Penyelesaian</span>
 										</a>
 									</li>
 									<li>
@@ -242,63 +241,76 @@
 				</div>
 			</div>
 		</div>
-		<!-- End Sidebar -->
-
 		<div class="main-panel">
 			<div class="content">
-				<div class="panel-header bg-primary-gradient">
-					<div class="page-inner py-5">
-						<div class="d-flex align-items-left align-items-md-center flex-column flex-md-row">
-							<div>
-								<h2 class="text-white pb-2 fw-bold">Dashboard</h2>
-							</div>
-						</div>
+				<div class="page-inner">
+					<div class="page-header">
+						<h4 class="page-title">Tahapan Pengajuan Persyaratan Untuk Material Kegiatan</h4>
 					</div>
-				</div>
-				<div class="page-inner mt--5">
-					<div class="row mt--2">
-						<div class="col-md-6">
-							<div class="card full-height">
-								<div class="card-body">
-									<div class="card-title">Overall statistics</div>
-									<div class="card-category">Daily information about statistics in system</div>
-									<div class="d-flex flex-wrap justify-content-around pb-2 pt-4">
-										<div class="px-2 pb-2 pb-md-0 text-center">
-											<div id="circles-1"></div>
-											<h6 class="fw-bold mt-3 mb-0">New Users</h6>
-										</div>
-										<div class="px-2 pb-2 pb-md-0 text-center">
-											<div id="circles-2"></div>
-											<h6 class="fw-bold mt-3 mb-0">Sales</h6>
-										</div>
-										<div class="px-2 pb-2 pb-md-0 text-center">
-											<div id="circles-3"></div>
-											<h6 class="fw-bold mt-3 mb-0">Subscribers</h6>
-										</div>
-									</div>
+					<div class="row">
+						<div class="col-md-12">
+							<div class="card">
+								<div class="card-header">
+                                    <h4 class="card-title">Pilih Tahapan:</h4> 
+                                    <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
+                                        <option value="penyerahanLokasi">Pemeriksaan Bersama</option>
+                                        <option value="spmk">Pengajuan Persyaratan Untuk Material Kegiatan</option>
+                                        <option value="rapatPersiapan">Pengawasan Mutu Konstruksi</option>
+                                        <option value="pembayaranMuka">Penerimaan dan Pembayaran Hasil Kerja</option>
+                                        <option value="mobilisasi">Kontrak Kritis</option>
+                                      </select>
+                                      <a href="form_pelaksanaan_pekerjaan_pemeriksaan.html" class="btn btn-primary btn-round ml-auto" style="float: right;">
+										<i class="fa fa-plus"></i>
+										Add Data
+                                    </a>
 								</div>
-							</div>
-						</div>
-						<div class="col-md-6">
-							<div class="card full-height">
 								<div class="card-body">
-									<div class="card-title">Total income & spend statistics</div>
-									<div class="row py-3">
-										<div class="col-md-4 d-flex flex-column justify-content-around">
-											<div>
-												<h6 class="fw-bold text-uppercase text-success op-8">Total Income</h6>
-												<h3 class="fw-bold">$9.782</h3>
-											</div>
-											<div>
-												<h6 class="fw-bold text-uppercase text-danger op-8">Total Spend</h6>
-												<h3 class="fw-bold">$1,248</h3>
-											</div>
-										</div>
-										<div class="col-md-8">
-											<div id="chart-container">
-												<canvas id="totalIncomeChart"></canvas>
-											</div>
-										</div>
+									<div class="table-responsive">
+										<table id="basic-datatables" class="display table table-bordered table-hover"  >
+											<thead>
+												<tr>
+                                                    <th>No</th>
+                                                    <th>Uraian</th>
+													<th>Status</th>
+													<th>Keterangan</th>
+													<th>File</th>
+													<th>Aksi</th>
+                                                </tr>
+											</thead>
+											<tbody>
+                                                <tr>
+                                                    <td>1</td>
+													<td>Ini adalah persiapan 1</td>
+													<td>Ya</td>
+													<td>-</td>
+													<td>
+                                                        <div class="aksifile">
+                                                        <button class="btn btn-primary btn-sm rounded-0" type="button" data-toggle="tooltip" data-placement="top" title="Download"><i class="fa fa-download"></i></button>
+														<button class="btn btn-info btn-sm rounded-0" type="button" data-toggle="tooltip" data-placement="top" title="Print"><i class="fa fa-print"></i></button>
+                                                        </div>
+                                                    </td>
+													<td>
+														<li class="list-inline-item">
+															<button class="btn btn-primary btn-sm rounded-0" type="button" data-toggle="tooltip" data-placement="top" title="Edit"><i class="fa fa-edit"></i></button>
+															<button class="btn btn-info btn-sm rounded-0" type="button" data-toggle="tooltip" data-placement="top" title="Delete"><i class="fa fa-trash"></i></button>
+														</li>
+													</td>
+												</tr>
+                                                <tr>
+                                                    <td>2</td>
+													<td>Ini adalah persiapan 3</td>
+													<td>Tidak</td>
+													<td>khkjh</td>
+													<td>-</td>
+													<td>
+														<li class="list-inline-item">
+															<button class="btn btn-primary btn-sm rounded-0" type="button" data-toggle="tooltip" data-placement="top" title="Edit"><i class="fa fa-edit"></i></button>
+															<button class="btn btn-info btn-sm rounded-0" type="button" data-toggle="tooltip" data-placement="top" title="Delete"><i class="fa fa-trash"></i></button>
+														</li>
+													</td>
+												</tr>
+                                            </tbody>
+										</table>
 									</div>
 								</div>
 							</div>
@@ -318,136 +330,22 @@
 	<script src="../assets/js/core/jquery.3.2.1.min.js"></script>
 	<script src="../assets/js/core/popper.min.js"></script>
 	<script src="../assets/js/core/bootstrap.min.js"></script>
-
 	<!-- jQuery UI -->
 	<script src="../assets/js/plugin/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
 	<script src="../assets/js/plugin/jquery-ui-touch-punch/jquery.ui.touch-punch.min.js"></script>
-
+	
 	<!-- jQuery Scrollbar -->
 	<script src="../assets/js/plugin/jquery-scrollbar/jquery.scrollbar.min.js"></script>
-
-
-	<!-- Chart JS -->
-	<script src="../assets/js/plugin/chart.js/chart.min.js"></script>
-
-	<!-- jQuery Sparkline -->
-	<script src="../assets/js/plugin/jquery.sparkline/jquery.sparkline.min.js"></script>
-
-	<!-- Chart Circle -->
-	<script src="../assets/js/plugin/chart-circle/circles.min.js"></script>
-
 	<!-- Datatables -->
 	<script src="../assets/js/plugin/datatables/datatables.min.js"></script>
-
-	<!-- Bootstrap Notify -->
-	<script src="../assets/js/plugin/bootstrap-notify/bootstrap-notify.min.js"></script>
-
-	<!-- jQuery Vector Maps -->
-	<script src="../assets/js/plugin/jqvmap/jquery.vmap.min.js"></script>
-	<script src="../assets/js/plugin/jqvmap/maps/jquery.vmap.world.js"></script>
-
-	<!-- Sweet Alert -->
-	<script src="../assets/js/plugin/sweetalert/sweetalert.min.js"></script>
-
 	<!-- Atlantis JS -->
 	<script src="../assets/js/atlantis.min.js"></script>
-
 	<!-- Atlantis DEMO methods, don't include it in your project! -->
-	<script src="../assets/js/setting-demo.js"></script>
-	<script src="../assets/js/demo.js"></script>
-	<script>
-		Circles.create({
-			id:'circles-1',
-			radius:45,
-			value:60,
-			maxValue:100,
-			width:7,
-			text: 5,
-			colors:['#f1f1f1', '#FF9E27'],
-			duration:400,
-			wrpClass:'circles-wrp',
-			textClass:'circles-text',
-			styleWrapper:true,
-			styleText:true
-		})
-
-		Circles.create({
-			id:'circles-2',
-			radius:45,
-			value:70,
-			maxValue:100,
-			width:7,
-			text: 36,
-			colors:['#f1f1f1', '#2BB930'],
-			duration:400,
-			wrpClass:'circles-wrp',
-			textClass:'circles-text',
-			styleWrapper:true,
-			styleText:true
-		})
-
-		Circles.create({
-			id:'circles-3',
-			radius:45,
-			value:40,
-			maxValue:100,
-			width:7,
-			text: 12,
-			colors:['#f1f1f1', '#F25961'],
-			duration:400,
-			wrpClass:'circles-wrp',
-			textClass:'circles-text',
-			styleWrapper:true,
-			styleText:true
-		})
-
-		var totalIncomeChart = document.getElementById('totalIncomeChart').getContext('2d');
-
-		var mytotalIncomeChart = new Chart(totalIncomeChart, {
-			type: 'bar',
-			data: {
-				labels: ["S", "M", "T", "W", "T", "F", "S", "S", "M", "T"],
-				datasets : [{
-					label: "Total Income",
-					backgroundColor: '#ff9e27',
-					borderColor: 'rgb(23, 125, 255)',
-					data: [6, 4, 9, 5, 4, 6, 4, 3, 8, 10],
-				}],
-			},
-			options: {
-				responsive: true,
-				maintainAspectRatio: false,
-				legend: {
-					display: false,
-				},
-				scales: {
-					yAxes: [{
-						ticks: {
-							display: false //this will remove only the label
-						},
-						gridLines : {
-							drawBorder: false,
-							display : false
-						}
-					}],
-					xAxes : [ {
-						gridLines : {
-							drawBorder: false,
-							display : false
-						}
-					}]
-				},
-			}
-		});
-
-		$('#lineChart').sparkline([105,103,123,100,95,105,115], {
-			type: 'line',
-			height: '70',
-			width: '100%',
-			lineWidth: '2',
-			lineColor: '#ffa534',
-			fillColor: 'rgba(255, 165, 52, .14)'
-		});
+	<script src="../assets/js/setting-demo2.js"></script>
+	<script >
+		$(document).ready(function() {
+		$('#basic-datatables').DataTable();
+	} );
 	</script>
 </body>
 </html>
