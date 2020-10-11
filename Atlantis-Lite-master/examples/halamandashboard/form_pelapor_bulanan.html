@@ -269,38 +269,22 @@
 							<a href="#" target="blank" name="contohFormat">Format Laporan.pdf</a>
 						</div>
 					<form>
-                    <div class="form-group">
-                        <label for="exampleInputPassword1">Uraian</label>
-						<textarea class="form-control" name="uraian" rows="2"></textarea>
-                    </div>
-					<div class="form-group">
-						<label for="exampleInputPassword1">Ada Bukti?</label>
-						<br>
-						<div class="form-check form-check-inline">
-							<input class="form-check-input" type="radio" name="status" value="ya">
-							<label class="form-check-label" for="inlineRadio1">Ya</label>
-						  </div>
-						  <div class="form-check form-check-inline">
-							<input class="form-check-input" type="radio" name="status" value="tidak">
-							<label class="form-check-label" for="inlineRadio2">Tidak</label>
-						  </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="exampleFormControlTextarea1">Keterangan</label>
-                        <textarea class="form-control" name="keterangan" rows="3"></textarea>
-                      </div>
-                    <div class="form-group">
-                        <label for="exampleInputPassword1">Upload File</label>
-                        <div class="input-group mb-3">
-                            <div class="input-group-prepend">
-                              <span class="input-group-text">Upload</span>
-                            </div>
-                            <div class="custom-file">
-                              <input type="file" class="custom-file-input" name="fileUpload">
-                              <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
-                            </div>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Judul</label>
+                            <input type="number" name="judulLaporan" class="form-control" id="judulLaporan" aria-describedby="kodetender">
                           </div>
-                    </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Upload File</label>
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                <span class="input-group-text">Upload</span>
+                                </div>
+                                <div class="custom-file">
+                                <input type="file" class="custom-file-input" name="fileUpload">
+                                <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
+                                </div>
+                            </div>
+                        </div>
                     <div class="form-group">
                         <input type="submit" class="btn btn-primary btn-md" style="margin-left: 35%; width: 30%;"></input>
                         </div>
