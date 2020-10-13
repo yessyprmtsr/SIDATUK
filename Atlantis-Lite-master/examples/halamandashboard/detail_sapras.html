@@ -267,11 +267,11 @@
 			<div class="content">
 				<div class="page-inner">
 					<div class="page-header">
-						<h4 class="page-title">Detail Data Irigasi: Pengadaan UPTD Citarum</h4>
+						<h4 class="page-title">Detail Data Sapras: Pengadaan UPTD Citarum</h4>
 					</div>
-					<div class="card" id="divPrint">
+					<div class="card">
 						<div class="card-body">
-							<div class="row" id="block1">
+							<div class="row">
 								<div class="col-lg-6 col-md-6 cols-sm-12">
 									<div class="form-group">
 										<label for="examplelabelEmail1">Kode Tender Pada LPSE : </label>
@@ -446,21 +446,6 @@
 	<!-- Atlantis JS -->
 	<script src="../assets/js/atlantis.min.js"></script>
 	<!-- Atlantis DEMO methods, don't include it in your project! -->
-	<script>
-	function printPage(id)
-		{
-		var html="<html>";
-		html+= document.getElementById(id).innerHTML;
-
-		html+="</html>";
-
-		var printWin = window.open();
-		printWin.document.write(html);
-		printWin.document.close();
-		printWin.focus();
-		printWin.print();
-		printWin.close();
-		}
-	</script>
+	<script src="../assets/js/setting-demo2.js"></script>
 </body>
 </html>
