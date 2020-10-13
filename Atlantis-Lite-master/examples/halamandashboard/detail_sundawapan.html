@@ -417,8 +417,9 @@
 										</div>
 								</div>
 								</div>
-								<div class="form-group" style="margin-left: 40%;">
-									<input type="button" class="btn btn-primary" value="Print" onclick="printPage('block1');" style="width: 200px;"></input>
+								<div class="form-group" style="margin-left: 35%;">
+									<button id="download" class="btn btn-info" onclick="download()" width="200px">Download</button>
+									<input type="button" class="btn btn-primary" value="Print" onclick="printPage('block1');" style="width: 100px;"></input>
 								</div>
 						</div>
 					</div>
@@ -446,6 +447,39 @@
 	<!-- Atlantis JS -->
 	<script src="../assets/js/atlantis.min.js"></script>
 	<!-- Atlantis DEMO methods, don't include it in your project! -->
-	<script src="../assets/js/setting-demo2.js"></script>
+    <script src="../assets/js/setting-demo2.js"></script>
+    <script>
+        function printPage(id)
+            {
+            var html="<html>";
+            html+= document.getElementById(id).innerHTML;
+    
+            html+="</html>";
+    
+            var printWin = window.open();
+            printWin.document.write(html);
+            printWin.document.close();
+            printWin.focus();
+            printWin.print();
+            printWin.close();
+            }
+        function download(){
+            var doc = new jsPDF();
+            var specialElementHandlers = {
+                '#block1': function (element, renderer) {
+                    return true;
+                }
+            };
+    
+            $('#download').click(function () {
+                doc.fromHTML($('#block1').html(), 15, 15, {
+                    'width': 170,
+                        'elementHandlers': specialElementHandlers
+                });
+                doc.save('detail.pdf');
+            });
+        }
+            
+        </script>
 </body>
 </html>
